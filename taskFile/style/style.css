@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 30px;
+    font-size: 1rem;
+}
+
+.container {
+    display: grid;
+    gap: 30px;
+}
+
+h1 {
+    font-size: 1.6em;
+    font-family: "Roboto Slab", system-ui;
+}
+
+.containerP {
+    font-family: "Roboto", system-ui;
+    font-size: .8em;
+    margin-top: 25px;
+}
+
+.containerRight {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    position: relative;
+}
+
+.containerRight img {
+    width: 170px;
+    z-index: 1;
+}
+
+.containerRight::after {
+    position: absolute;
+    content: '';
+    width: 193px;
+    height: 34px;
+    left: 50%;
+    bottom: -15px;
+    border-radius: 100%;
+    background-color: #EFEFEF;
+    transform: translateX(-50%);
+}
+
+.cards {
+    font-size: 1rem;
+    display: grid;
+    width: 100%;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.cards .box p,
+h3 {
+    font-family: "Roboto", system-ui;
+}
+
+.box-img {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    position: relative;
+    display: none;
+}
+
+.box-img img {
+    width: 80%;
+}
+
+.box-img::after {
+    position: absolute;
+    content: '';
+    width: 189px;
+    height: 32px;
+    left: 50%;
+    bottom: -15px;
+    border-radius: 100%;
+    background-color: #EFEFEF;
+    transform: translateX(-50%);
+}
+
+.bottom-container {
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    body {
+        padding: 60px;
+        font-size: 1.2rem;
+    }
+
+    .cards {
+        width: 60%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        padding: 80px;
+        font-size: 1.8rem;
+    }
+
+    .containerRight img {
+        width: 290px;
+    }
+
+    .containerRight::after {
+        width: 343px;
+        height: 59px;
+        bottom: -20px;
+    }
+
+    .bottom-container {
+        margin-top: 70px;
+    }
+
+    .cards {
+        width: 75%;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .box-img {
+        display: block;
+    }
+}
